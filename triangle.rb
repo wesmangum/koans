@@ -15,6 +15,17 @@
 #
 def triangle(a, b, c)
   # WRITE THIS CODE
+  if ((a > 0) && (b > 0) && (c > 0)) && ((a + b > c) && (b + c > a) && (a + c > b))
+    if ((a == b) && (b == c))
+      return :equilateral
+    elsif ((a == b) || (a == c) || (b == c))
+      return :isosceles
+    else
+      return :scalene
+    end
+  else
+    raise TriangleError, "The triangle cannot have a side of 0"
+  end
 end
 
 # Error class used in part 2.  No need to change this code.
