@@ -24,7 +24,7 @@ def triangle(a, b, c)
       return :scalene
     end
   else
-    raise TriangleError, "The triangle cannot have a side of 0"
+    raise TriangleError, "This triangle is whack, yo!"
   end
 end
 
